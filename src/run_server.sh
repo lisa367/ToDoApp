@@ -1,0 +1,1 @@
+/Volumes/Samsung_T5/DevProjects/ToDoApp/.env/bin/python /Volumes/Samsung_T5/DevProjects/ToDoApp/src/manage.py runserver
