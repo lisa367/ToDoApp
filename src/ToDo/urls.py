@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from views import TaskList, TaskCreate, TaskUpdate, TaskDelete
+from .views import TaskList, TaskCreate, TaskUpdate, TaskDelete
 
 
 app_name = "ToDo"
