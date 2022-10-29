@@ -5,8 +5,8 @@ from .models import Task
 
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ["action", "completed"]
-    list_editable = ["action", "completed"]
+    list_display = ("action", "completed")
+    list_editable = ("action", "completed")
 
 
 #admin.site.register(Task, TaskAdmin)
