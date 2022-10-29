@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from models import Task
+from .models import Task
 
 # Create your views here.
 class TaskList(ListView):
