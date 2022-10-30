@@ -8,8 +8,8 @@
 {% block content %}
 
 
-    {% csrf_token %}
     <form action="">
+        {% csrf_token %}
         {% if not task.completed %}
             <p>This as is not marked as completed<br>Do you want to delete it anyway ?</p>
         {% else %}
