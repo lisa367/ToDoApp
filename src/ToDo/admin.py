@@ -4,9 +4,12 @@ from .models import Task
 # Register your models here.
 
 
-class TaskAdmin(admin.ModelAdmin):
-    list_display = ("action", "completed")
-    list_editable = ("action", "completed")
+admin.site.register(Task)
+
+# class TaskAdmin(admin.ModelAdmin):
+#     fields = "__all_"
+#     list_display = "__all__"
+#     list_editable = ("completed", )
 
 
-#admin.site.register(Task, TaskAdmin)
+# admin.site.register(Task, TaskAdmin)
