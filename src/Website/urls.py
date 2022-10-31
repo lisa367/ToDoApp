@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import LandingPageView
+from .views import SignUpView
 
 
 urlpatterns = [
     path('', LandingPageView.as_view(), name='landing-page'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', SignUpView.as_view(), name='signup'),
     path('admin/', admin.site.urls),
     path('todo-list/', include('ToDo.urls')),
 ]
