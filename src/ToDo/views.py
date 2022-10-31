@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Task
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
+from .models import Task, User
+
+
+# from .forms import SignUpForm
 
 # Create your views here.
 
@@ -30,3 +33,8 @@ class TaskUpdate(UpdateView):
 class TaskDelete(DeleteView):
     model = Task
     success_url = reverse_lazy("ToDo:home")
+
+# class SignUpView(CreateView):
+#     model = User
+#     form_class = 'SignUpForm'
+#     success_url = reverse_lazy()
