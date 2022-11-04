@@ -2,8 +2,22 @@
 {% load static %}
 
 {% block title %}
-
+    <title>Your Todo List</title>
 {% endblock %}
 
 {% block content %}
+    <h1>{{ user.username }}'s List of Tasks</h1>
+<br>
+    <a href="#">New task</a>
+<br>
+    <table>
+        {% for todo in todos %}
+        <tr>
+            <td>{{ todo.action }}</td>
+            <td><a href="{% url 'edit' task_id=todo.pk %}">Edit</a></td>
+            <td><a href="{% url 'delete' task_id=todo.pk %}">Delete</a></td>
+            <td></td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
